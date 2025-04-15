@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Precious Waste Refinery</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2F855A',
+                        secondary: '#276749',
+                        accent: '#48BB78'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-poppins font-bold text-primary">
+                        <i class="fas fa-recycle mr-2"></i>
+                        PWR
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#impact" class="text-gray-700 hover:text-primary transition-colors">Our Impact</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+                    <a href="index.html#pricing" class="text-gray-700 hover:text-primary transition-colors">Pricing</a>
+                    <a href="index.html#process" class="text-gray-700 hover:text-primary transition-colors">How It Works</a>
+                    <a href="index.html#join" class="text-gray-700 hover:text-primary transition-colors">Join Us</a>
+                    <a href="blog.html" class="text-primary font-semibold">Blog</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Start Recycling
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-green-50 to-green-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h1 class="font-poppins font-bold text-4xl md:text-5xl text-gray-900 mb-6">
+                    E-Waste Recycling Blog
+                </h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Stay informed about the latest in electronic waste management, sustainability practices, and environmental impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="relative h-64 md:h-full">
+                        <img src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg" 
+                             alt="Sustainable Technology" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <span class="text-primary font-semibold">Featured</span>
+                        <h2 class="font-poppins font-bold text-2xl mt-2 mb-4">
+                            The Future of E-Waste: Trends and Innovations in 2024
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Discover how emerging technologies and innovative recycling methods are transforming the e-waste management industry, making it more efficient and environmentally friendly than ever before.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500 mb-6">
+                            <span class="mr-4"><i class="far fa-calendar mr-1"></i> April 15, 2024</span>
+                            <span><i class="far fa-clock mr-1"></i> 8 min read</span>
+                        </div>
+                        <a href="#" class="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition-colors">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Articles -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="font-poppins font-bold text-3xl mb-12">Recent Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all">
+                    <div class="relative h-48">
+                        <img src="https://images.pexels.com/photos/4792479/pexels-photo-4792479.jpeg" 
+                             alt="Electronic Waste" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-xl mb-3">
+                            How to Properly Dispose of Your Old Electronics
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Learn the best practices for disposing of your electronic devices responsibly and safely.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <span class="mr-4"><i class="far fa-calendar mr-1"></i> April 12, 2024</span>
+                            <span><i class="far fa-clock mr-1"></i> 5 min read</span>
+                        </div>
+                        <a href="#" class="text-primary hover:text-secondary font-semibold">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all">
+                    <div class="relative h-48">
+                        <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg" 
+                             alt="Sustainable Technology" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-xl mb-3">
+                            The Environmental Impact of E-Waste
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Understanding the environmental consequences of electronic waste and why proper recycling matters.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <span class="mr-4"><i class="far fa-calendar mr-1"></i> April 10, 2024</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 min read</span>
+                        </div>
+                        <a href="#" class="text-primary hover:text-secondary font-semibold">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all">
+                    <div class="relative h-48">
+                        <img src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg" 
+                             alt="Recycling Process" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-xl mb-3">
+                            Corporate E-Waste Management Solutions
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            How businesses can implement effective e-waste management strategies in their operations.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <span class="mr-4"><i class="far fa-calendar mr-1"></i> April 8, 2024</span>
+                            <span><i class="far fa-clock mr-1"></i> 7 min read</span>
+                        </div>
+                        <a href="#" class="text-primary hover:text-secondary font-semibold">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="font-poppins font-bold text-3xl mb-12">Browse by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#" class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-leaf text-primary text-3xl mb-4"></i>
+                    <h3 class="font-poppins font-semibold">Sustainability</h3>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-recycle text-primary text-3xl mb-4"></i>
+                    <h3 class="font-poppins font-semibold">Recycling Tips</h3>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-industry text-primary text-3xl mb-4"></i>
+                    <h3 class="font-poppins font-semibold">Industry News</h3>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <i class="fas fa-lightbulb text-primary text-3xl mb-4"></i>
+                    <h3 class="font-poppins font-semibold">Innovation</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="font-poppins font-bold text-3xl mb-4">Stay Updated</h2>
+                <p class="mb-8">Subscribe to our newsletter for the latest articles, news, and updates about e-waste recycling.</p>
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                    <button type="submit" class="bg-white text-primary px-8 py-3 rounded-full hover:bg-gray-100 transition-colors font-semibold">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-poppins font-bold text-xl mb-4">About Us</h3>
+                    <p class="text-gray-400">
+                        Precious Waste Refinery is committed to responsible e-waste recycling and environmental sustainability.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-poppins font-bold text-xl mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#impact" class="text-gray-400 hover:text-white transition-colors">Our Impact</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="index.html#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="index.html#process" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-poppins font-bold text-xl mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@pwr.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Eco Street, Green City</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-poppins font-bold text-xl mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Precious Waste Refinery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

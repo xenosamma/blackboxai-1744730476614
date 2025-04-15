@@ -107,12 +107,7 @@ async function initializeCMS() {
         // Create admin user if it doesn't exist
         const adminExists = await User.findOne({ email: defaultAdmin.email });
         if (!adminExists) {
-            const salt = await bcrypt.genSalt(10);
-            const hashedPassword = await bcrypt.hash(defaultAdmin.password, salt);
-            await User.create({
-                ...defaultAdmin,
-                password: hashedPassword
-            });
+            await User.create(defaultAdmin);
             logger.info('Admin user created successfully');
         } else {
             logger.info('Admin user already exists');

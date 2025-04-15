@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Precious Waste Refinery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center">
+  <header class="mb-8 text-center">
+    <h1 class="text-4xl font-bold text-green-700 mb-2">Precious Waste Refinery</h1>
+    <p class="text-lg text-gray-700">Transforming E-Waste into a Greener Future</p>
+  </header>
+  <main class="max-w-4xl w-full px-4">
+    <section class="bg-white rounded-lg shadow p-6 mb-6">
+      <h2 class="text-2xl font-semibold mb-4">Welcome to Precious Waste Refinery</h2>
+      <p class="text-gray-600 mb-4">
+        Join us in our mission to responsibly recycle electronic waste and create a sustainable tomorrow.
+      </p>
+      <form id="contact-form" action="/php/submit_form.php" method="POST" class="space-y-4" novalidate>
+        <input type="text" name="website" id="website" style="display:none" tabindex="-1" autocomplete="off" />
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+          <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded px-3 py-2" />
+          <p id="name-error" class="text-red-600 text-sm mt-1 hidden">Please enter your name.</p>
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-3 py-2" />
+          <p id="email-error" class="text-red-600 text-sm mt-1 hidden">Please enter a valid email address.</p>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <textarea id="message" name="message" rows="4" required class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+          <p id="message-error" class="text-red-600 text-sm mt-1 hidden">Please enter your message.</p>
+        </div>
+        <button type="submit" id="submit-button" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition">
+          Send Message
+        </button>
+        <p id="form-status" class="mt-4 text-center text-green-800 bg-green-100 rounded p-3 hidden"></p>
+      </form>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const form = document.getElementById('contact-form');
+          const submitButton = document.getElementById('submit-button');
+          const formStatus = document.getElementById('form-status');
+
+          const nameInput = document.getElementById('name');
+          const emailInput = document.getElementById('email');
+          const messageInput = document.getElementById('message');
+
+          const nameError = document.getElementById('name-error');
+          const emailError = document.getElementById('email-error');
+          const messageError = document.getElementById('message-error');
+
+          function validateEmail(email) {
+            const re = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+            return re.test(email.toLowerCase());
+          }
+
+          function clearErrors() {
+            nameError.classList.add('hidden');
+            emailError.classList.add('hidden');
+            messageError.classList.add('hidden');
+            formStatus.classList.add('hidden');
+            formStatus.textContent = '';
+          }
+
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            clearErrors();
+
+            let valid = true;
+
+            if (!nameInput.value.trim()) {
+              nameError.classList.remove('hidden');
+              valid = false;
+            }
+            if (!emailInput.value.trim() || !validateEmail(emailInput.value)) {
+              emailError.classList.remove('hidden');
+              valid = false;
+            }
+            if (!messageInput.value.trim()) {
+              messageError.classList.remove('hidden');
+              valid = false;
+            }
+
+            if (!valid) {
+              return;
+            }
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+              method: 'POST',
+              body: formData,
+            })
+              .then(response => response.json())
+              .then(data => {
+                if (data.error) {
+                  formStatus.textContent = data.error;
+                  formStatus.classList.remove('hidden');
+                  formStatus.classList.remove('text-green-800', 'bg-green-100');
+                  formStatus.classList.add('text-red-600', 'bg-red-100');
+                } else if (data.message) {
+                  formStatus.textContent = data.message;
+                  formStatus.classList.remove('hidden');
+                  formStatus.classList.remove('text-red-600', 'bg-red-100');
+                  formStatus.classList.add('text-green-800', 'bg-green-100');
+                  form.reset();
+                }
+              })
+              .catch(() => {
+                formStatus.textContent = 'Oops! Something went wrong, please try again.';
+                formStatus.classList.remove('hidden');
+                formStatus.classList.remove('text-green-800', 'bg-green-100');
+                formStatus.classList.add('text-red-600', 'bg-red-100');
+              })
+              .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+              });
+          });
+        });
+      </script>
+    </section>
+    <section class="bg-white rounded-lg shadow p-6">
+      <h2 class="text-2xl font-semibold mb-4">Our Services</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Device Collection - Convenient pickup service for your electronic waste</li>
+        <li>Data Destruction - Secure data wiping and physical destruction services</li>
+        <li>Recycling Process - Environmentally responsible recycling methods</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="mt-auto py-6 text-center text-gray-500 text-sm">
+    &copy; 2024 Precious Waste Refinery. All rights reserved.
+  </footer>
+</body>
+</html>

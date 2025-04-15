@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Management - PWR Admin</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- TinyMCE Editor -->
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <style>
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+    </style>
+
+    <script>
+        // Initialize TinyMCE
+        function initEditor() {
+            tinymce.init({
+                selector: '#content-editor',
+                plugins: 'advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table code help wordcount',
+                toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+                height: 400
+            });
+        }
+
+        // Load content sections
+        async function loadContentSections() {
+            try {
+                const response = await fetch('/api/content', {
+                    headers: {
+                        'Authorization': `Bearer ${localStorage.getItem('pwr_admin_token')}`
+                    }
+                });
+                const data = await response.json();
+                
+                const contentList = document.getElementById('content-list');
+                contentList.innerHTML = data.data.map(content => `
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+                         onclick="loadContent('${content._id}')">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-semibold text-lg">${content.section}</h3>
+                            <span class="text-sm text-gray-500">Last modified: ${new Date(content.lastModified).toLocaleDateString()}</span>
+                        </div>
+                        <p class="text-gray-600 mt-2">${content.type}</p>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading content sections:', error);
+            }
+        }
+
+        // Load specific content
+        async function loadContent(id) {
+            try {
+                const response = await fetch(`/api/content/${id}`, {
+                    headers: {
+                        'Authorization': `Bearer ${localStorage.getItem('pwr_admin_token')}`
+                    }
+                });
+                const content = await response.json();
+                
+                document.getElementById('content-id').value = content._id;
+                document.getElementById('section-name').value = content.section;
+                document.getElementById('content-type').value = content.type;
+                tinymce.get('content-editor').setContent(JSON.stringify(content.content, null, 2));
+                
+                // Show editor
+                document.getElementById('content-editor-container').classList.remove('hidden');
+            } catch (error) {
+                console.error('Error loading content:', error);
+            }
+        }
+
+        // Save content
+        async function saveContent() {
+            try {
+                const id = document.getElementById('content-id').value;
+                const content = {
+                    section: document.getElementById('section-name').value,
+                    type: document.getElementById('content-type').value,
+                    content: JSON.parse(tinymce.get('content-editor').getContent())
+                };
+
+                const response = await fetch(`/api/content/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('pwr_admin_token')}`
+                    },
+                    body: JSON.stringify(content)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to save content');
+                }
+
+                showNotification('Content saved successfully');
+                loadContentSections();
+            } catch (error) {
+                console.error('Error saving content:', error);
+                showNotification('Error saving content', 'error');
+            }
+        }
+
+        // Show notification
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `fixed bottom-4 right-4 p-4 rounded-lg ${
+                type === 'success' ? 'bg-green-500' : 'bg-red-500'
+            } text-white`;
+            
+            setTimeout(() => {
+                notification.className = 'hidden';
+            }, 3000);
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            initEditor();
+            loadContentSections();
+        });
+    </script>
+</head>
+<body class="bg-gray-100 font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/admin" class="font-poppins font-bold text-xl text-primary">
+                            <i class="fas fa-recycle mr-2"></i>PWR Admin
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="/admin" class="text-gray-600 hover:text-gray-900 mr-4">
+                        <i class="fas fa-arrow-left mr-2"></i>Back to Dashboard
+                    </a>
+                    <button onclick="logout()" class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="pt-16 p-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-2xl font-bold">Content Management</h1>
+                <button onclick="createNewContent()" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+                    <i class="fas fa-plus mr-2"></i>New Content
+                </button>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="content-list">
+                <!-- Content sections will be loaded here -->
+            </div>
+
+            <!-- Content Editor -->
+            <div id="content-editor-container" class="hidden mt-8 bg-white rounded-lg shadow-lg p-6">
+                <input type="hidden" id="content-id">
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Section Name</label>
+                        <input type="text" id="section-name" class="w-full p-2 border rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Content Type</label>
+                        <select id="content-type" class="w-full p-2 border rounded-lg">
+                            <option value="text">Text</option>
+                            <option value="image">Image</option>
+                            <option value="list">List</option>
+                            <option value="form">Form</option>
+                            <option value="stats">Stats</option>
+                        </select>
+                    </div>
+                </div>
+                <textarea id="content-editor"></textarea>
+                <div class="flex justify-end mt-4 space-x-4">
+                    <button onclick="previewContent()" class="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                        <i class="fas fa-eye mr-2"></i>Preview
+                    </button>
+                    <button onclick="saveContent()" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-secondary transition-colors">
+                        <i class="fas fa-save mr-2"></i>Save Changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="hidden"></div>
+
+    <script>
+        // Configure Tailwind theme
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2F855A',
+                        secondary: '#276749'
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

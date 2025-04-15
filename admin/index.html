@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWR Admin Dashboard</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+    </style>
+
+    <script>
+        // Check authentication
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('pwr_admin_token');
+            if (!token && window.location.pathname !== '/admin/login.html') {
+                window.location.href = '/admin/login.html';
+            }
+        });
+
+        // Logout function
+        function logout() {
+            localStorage.removeItem('pwr_admin_token');
+            window.location.href = '/admin/login.html';
+        }
+
+        // API helper function
+        async function apiRequest(endpoint, method = 'GET', data = null) {
+            const token = localStorage.getItem('pwr_admin_token');
+            try {
+                const response = await fetch(`/api${endpoint}`, {
+                    method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: data ? JSON.stringify(data) : null
+                });
+                
+                if (!response.ok) {
+                    throw new Error('API request failed');
+                }
+                
+                return await response.json();
+            } catch (error) {
+                console.error('API Error:', error);
+                throw error;
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/admin" class="font-poppins font-bold text-xl text-primary">
+                            <i class="fas fa-recycle mr-2"></i>PWR Admin
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button onclick="logout()" class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="flex h-screen pt-16">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-lg fixed h-full">
+            <div class="p-4">
+                <nav class="space-y-2">
+                    <a href="#dashboard" class="block px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                        <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+                    </a>
+                    <a href="#content" class="block px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                        <i class="fas fa-edit mr-2"></i>Content
+                    </a>
+                    <a href="#media" class="block px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                        <i class="fas fa-images mr-2"></i>Media
+                    </a>
+                    <a href="#settings" class="block px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                        <i class="fas fa-cog mr-2"></i>Settings
+                    </a>
+                    <a href="#users" class="block px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                        <i class="fas fa-users mr-2"></i>Users
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 ml-64 p-8">
+            <!-- Dashboard Overview -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg mb-2">Content Sections</h3>
+                    <p class="text-3xl font-bold text-primary">8</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg mb-2">Media Files</h3>
+                    <p class="text-3xl font-bold text-primary">24</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg mb-2">Active Users</h3>
+                    <p class="text-3xl font-bold text-primary">3</p>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                <h2 class="font-semibold text-xl mb-4">Recent Activity</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between border-b pb-4">
+                        <div>
+                            <p class="font-medium">Content Updated: Hero Section</p>
+                            <p class="text-sm text-gray-500">Updated by Admin</p>
+                        </div>
+                        <span class="text-sm text-gray-500">2 hours ago</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b pb-4">
+                        <div>
+                            <p class="font-medium">New Media Uploaded</p>
+                            <p class="text-sm text-gray-500">Uploaded by Editor</p>
+                        </div>
+                        <span class="text-sm text-gray-500">5 hours ago</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="font-medium">Settings Changed: Theme Colors</p>
+                            <p class="text-sm text-gray-500">Updated by Admin</p>
+                        </div>
+                        <span class="text-sm text-gray-500">1 day ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="font-semibold text-xl mb-4">Quick Actions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <button class="p-4 bg-primary text-white rounded-lg hover:bg-secondary transition-colors">
+                        <i class="fas fa-plus-circle mr-2"></i>Add Content
+                    </button>
+                    <button class="p-4 bg-primary text-white rounded-lg hover:bg-secondary transition-colors">
+                        <i class="fas fa-upload mr-2"></i>Upload Media
+                    </button>
+                    <button class="p-4 bg-primary text-white rounded-lg hover:bg-secondary transition-colors">
+                        <i class="fas fa-user-plus mr-2"></i>Add User
+                    </button>
+                    <button class="p-4 bg-primary text-white rounded-lg hover:bg-secondary transition-colors">
+                        <i class="fas fa-sync mr-2"></i>Update Cache
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize dashboard data
+        async function initializeDashboard() {
+            try {
+                // Fetch statistics
+                const stats = await apiRequest('/content/stats');
+                // Update UI with stats
+                // ... implementation
+            } catch (error) {
+                console.error('Error initializing dashboard:', error);
+            }
+        }
+
+        // Initialize when page loads
+        initializeDashboard();
+    </script>
+</body>
+</html>

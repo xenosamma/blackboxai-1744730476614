@@ -1,0 +1,257 @@
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-04-15 19:36:38"}
+{"level":"info","message":"Admin user created successfully","timestamp":"2025-04-15 19:36:41"}
+{"level":"info","message":"Default content created for section: hero","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Default content created for section: impact","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Default content created for section: services","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: primaryColor","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: secondaryColor","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: accentColor","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: backgroundColor","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: textColor","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: fontPrimary","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: fontSecondary","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: containerWidth","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: spacing","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: borderRadius","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: email","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: phone","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: address","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: socialMedia","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: title","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: description","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: keywords","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: googleAnalyticsId","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: enableBlog","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: enableNewsletter","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: enableChat","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Initialized setting: enableAnalytics","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Settings initialized successfully","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/uploads","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/uploads/images","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/logs","timestamp":"2025-04-15 19:36:42"}
+{"level":"info","message":"Server running in development mode on port 8000","timestamp":"2025-04-15 19:37:06"}
+{"level":"info","message":"Admin panel available at http://localhost:8000/admin","timestamp":"2025-04-15 19:37:06"}
+{"code":"ENOTFOUND","hostname":"_mongodb._tcp.cluster0.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net","stack":"Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-04-15 19:37:06"}
+{"level":"info","message":"Retrying connection attempt 1 of 5","timestamp":"2025-04-15 19:37:06"}
+{"code":"ENOTFOUND","hostname":"_mongodb._tcp.cluster0.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net","stack":"Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-04-15 19:37:11"}
+{"level":"info","message":"Retrying connection attempt 2 of 5","timestamp":"2025-04-15 19:37:11"}
+{"code":"ENOTFOUND","hostname":"_mongodb._tcp.cluster0.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net","stack":"Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-04-15 19:37:16"}
+{"level":"info","message":"Retrying connection attempt 3 of 5","timestamp":"2025-04-15 19:37:16"}
+{"code":"ENOTFOUND","hostname":"_mongodb._tcp.cluster0.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net","stack":"Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-04-15 19:37:21"}
+{"level":"info","message":"Retrying connection attempt 4 of 5","timestamp":"2025-04-15 19:37:21"}
+{"code":"ENOTFOUND","hostname":"_mongodb._tcp.cluster0.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net","stack":"Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-04-15 19:37:26"}
+{"level":"info","message":"Retrying connection attempt 5 of 5","timestamp":"2025-04-15 19:37:26"}
+{"code":"ENOTFOUND","hostname":"_mongodb._tcp.cluster0.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net","stack":"Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:275:17)","syscall":"querySrv","timestamp":"2025-04-15 19:37:32"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-04-15 19:38:13"}
+{"level":"info","message":"Admin user already exists","timestamp":"2025-04-15 19:38:13"}
+{"level":"info","message":"Content already exists for section: hero","timestamp":"2025-04-15 19:38:13"}
+{"level":"info","message":"Content already exists for section: impact","timestamp":"2025-04-15 19:38:13"}
+{"level":"info","message":"Content already exists for section: services","timestamp":"2025-04-15 19:38:13"}
+{"level":"info","message":"Settings initialized successfully","timestamp":"2025-04-15 19:38:13"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/uploads","timestamp":"2025-04-15 19:38:13"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/uploads/images","timestamp":"2025-04-15 19:38:13"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/logs","timestamp":"2025-04-15 19:38:13"}
+{"level":"info","message":"Server running in development mode on port 8000","timestamp":"2025-04-15 19:38:28"}
+{"level":"info","message":"Admin panel available at http://localhost:8000/admin","timestamp":"2025-04-15 19:38:28"}
+{"level":"info","message":"Successfully connected to MongoDB","timestamp":"2025-04-15 19:38:28"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:39:00","url":"/admin","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin \u001b[36m301\u001b[0m 2.483 ms - 155\u001b[0m","timestamp":"2025-04-15 19:39:00"}
+{"duration":"10ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":301,"timestamp":"2025-04-15 19:39:00","url":"/admin","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:39:00","url":"/admin/","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/ \u001b[32m200\u001b[0m 34.983 ms - -\u001b[0m","timestamp":"2025-04-15 19:39:00"}
+{"duration":"41ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:39:00","url":"/admin/","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:39:01","url":"/favicon.ico","user":"anonymous"}
+{"level":"error","message":"ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","method":"GET","path":"/favicon.ico","stack":"Error: ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","timestamp":"2025-04-15 19:39:01"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 3.396 ms - 232\u001b[0m","timestamp":"2025-04-15 19:39:01"}
+{"duration":"4ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":404,"timestamp":"2025-04-15 19:39:01","url":"/favicon.ico","user":"anonymous"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-04-15 19:41:09"}
+{"level":"info","message":"Process terminated","timestamp":"2025-04-15 19:41:09"}
+{"level":"warn","message":"MongoDB disconnected","timestamp":"2025-04-15 19:41:09"}
+{"level":"info","message":"Server running in development mode on port 8000","timestamp":"2025-04-15 19:41:12"}
+{"level":"info","message":"Admin panel available at http://localhost:8000/admin","timestamp":"2025-04-15 19:41:12"}
+{"level":"info","message":"Successfully connected to MongoDB","timestamp":"2025-04-15 19:41:12"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:41:47","url":"/admin","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin \u001b[36m301\u001b[0m 2.505 ms - 155\u001b[0m","timestamp":"2025-04-15 19:41:47"}
+{"duration":"6ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":301,"timestamp":"2025-04-15 19:41:47","url":"/admin","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:41:47","url":"/admin/","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/ \u001b[32m200\u001b[0m 67.623 ms - -\u001b[0m","timestamp":"2025-04-15 19:41:48"}
+{"duration":"75ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:41:48","url":"/admin/","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:41:48","url":"/api/content/stats","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:41:48","url":"/admin/login.html","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /api/content/stats \u001b[32m200\u001b[0m 103.745 ms - 26\u001b[0m","timestamp":"2025-04-15 19:41:48"}
+{"duration":"107ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:41:48","url":"/api/content/stats","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/login.html \u001b[32m200\u001b[0m 101.508 ms - -\u001b[0m","timestamp":"2025-04-15 19:41:48"}
+{"duration":"103ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:41:48","url":"/admin/login.html","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:41:48","url":"/favicon.ico","user":"anonymous"}
+{"level":"error","message":"ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","method":"GET","path":"/favicon.ico","stack":"Error: ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","timestamp":"2025-04-15 19:41:48"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 4.219 ms - 232\u001b[0m","timestamp":"2025-04-15 19:41:48"}
+{"duration":"6ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":404,"timestamp":"2025-04-15 19:41:48","url":"/favicon.ico","user":"anonymous"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-04-15 19:42:47"}
+{"level":"info","message":"Process terminated","timestamp":"2025-04-15 19:42:47"}
+{"level":"info","message":"Server running in development mode on port 8000","timestamp":"2025-04-15 19:42:47"}
+{"level":"info","message":"Admin panel available at http://localhost:8000/admin","timestamp":"2025-04-15 19:42:47"}
+{"level":"info","message":"Successfully connected to MongoDB","timestamp":"2025-04-15 19:42:47"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:43:07","url":"/admin","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin \u001b[36m301\u001b[0m 2.324 ms - 155\u001b[0m","timestamp":"2025-04-15 19:43:07"}
+{"duration":"4ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":301,"timestamp":"2025-04-15 19:43:07","url":"/admin","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:43:07","url":"/admin/","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/ \u001b[32m200\u001b[0m 3.222 ms - -\u001b[0m","timestamp":"2025-04-15 19:43:07"}
+{"duration":"6ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:43:07","url":"/admin/","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:43:07","url":"/api/content/stats","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /api/content/stats \u001b[32m200\u001b[0m 12.716 ms - 26\u001b[0m","timestamp":"2025-04-15 19:43:07"}
+{"duration":"14ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:43:07","url":"/api/content/stats","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:43:07","url":"/admin/login.html","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/login.html \u001b[32m200\u001b[0m 2.053 ms - -\u001b[0m","timestamp":"2025-04-15 19:43:07"}
+{"duration":"4ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:43:07","url":"/admin/login.html","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:43:07","url":"/favicon.ico","user":"anonymous"}
+{"level":"error","message":"ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","method":"GET","path":"/favicon.ico","stack":"Error: ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","timestamp":"2025-04-15 19:43:07"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 2.777 ms - 232\u001b[0m","timestamp":"2025-04-15 19:43:07"}
+{"duration":"3ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":404,"timestamp":"2025-04-15 19:43:07","url":"/favicon.ico","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:44:30","url":"/admin/login.html?","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/login.html? \u001b[32m200\u001b[0m 1.197 ms - -\u001b[0m","timestamp":"2025-04-15 19:44:30"}
+{"duration":"4ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:44:30","url":"/admin/login.html?","user":"anonymous"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-04-15 19:45:49"}
+{"level":"info","message":"Process terminated","timestamp":"2025-04-15 19:45:49"}
+{"level":"info","message":"Server running in development mode on port 8000","timestamp":"2025-04-15 19:45:51"}
+{"level":"info","message":"Admin panel available at http://localhost:8000/admin","timestamp":"2025-04-15 19:45:51"}
+{"level":"info","message":"Successfully connected to MongoDB","timestamp":"2025-04-15 19:45:51"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:46:27","url":"/admin","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin \u001b[36m301\u001b[0m 5.412 ms - 155\u001b[0m","timestamp":"2025-04-15 19:46:27"}
+{"duration":"10ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":301,"timestamp":"2025-04-15 19:46:27","url":"/admin","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:46:27","url":"/admin/","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/ \u001b[32m200\u001b[0m 26.827 ms - -\u001b[0m","timestamp":"2025-04-15 19:46:27"}
+{"duration":"42ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:46:27","url":"/admin/","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:46:27","url":"/api/content/stats","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:46:27","url":"/admin/login.html","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /api/content/stats \u001b[32m200\u001b[0m 36.707 ms - 26\u001b[0m","timestamp":"2025-04-15 19:46:27"}
+{"duration":"39ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:46:27","url":"/api/content/stats","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/login.html \u001b[32m200\u001b[0m 56.658 ms - -\u001b[0m","timestamp":"2025-04-15 19:46:27"}
+{"duration":"61ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:46:27","url":"/admin/login.html","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:46:28","url":"/favicon.ico","user":"anonymous"}
+{"level":"error","message":"ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","method":"GET","path":"/favicon.ico","stack":"Error: ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","timestamp":"2025-04-15 19:46:28"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 7.629 ms - 232\u001b[0m","timestamp":"2025-04-15 19:46:28"}
+{"duration":"8ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":404,"timestamp":"2025-04-15 19:46:28","url":"/favicon.ico","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"POST","timestamp":"2025-04-15 19:47:51","url":"/api/auth/login","user":"anonymous"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 98.744 ms - 49\u001b[0m","timestamp":"2025-04-15 19:47:51"}
+{"duration":"100ms","ip":"::1","level":"info","message":"API Response","method":"POST","status":401,"timestamp":"2025-04-15 19:47:51","url":"/api/auth/login","user":"anonymous"}
+{"level":"info","message":"Dropping database...","timestamp":"2025-04-15 19:49:30"}
+{"level":"info","message":"Database dropped successfully","timestamp":"2025-04-15 19:49:32"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-04-15 19:49:32"}
+{"level":"info","message":"Admin user created successfully","timestamp":"2025-04-15 19:49:36"}
+{"level":"info","message":"Default content created for section: hero","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Default content created for section: impact","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Default content created for section: services","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: primaryColor","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: secondaryColor","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: accentColor","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: backgroundColor","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: textColor","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: fontPrimary","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: fontSecondary","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: containerWidth","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: spacing","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: borderRadius","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: email","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: phone","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: address","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: socialMedia","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: title","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: description","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: keywords","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: googleAnalyticsId","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: enableBlog","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: enableNewsletter","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: enableChat","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Initialized setting: enableAnalytics","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Settings initialized successfully","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/uploads","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/uploads/images","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/logs","timestamp":"2025-04-15 19:49:37"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-04-15 19:49:53"}
+{"level":"info","message":"Process terminated","timestamp":"2025-04-15 19:49:53"}
+{"level":"warn","message":"MongoDB disconnected","timestamp":"2025-04-15 19:49:53"}
+{"level":"info","message":"Server running in development mode on port 8000","timestamp":"2025-04-15 19:49:54"}
+{"level":"info","message":"Admin panel available at http://localhost:8000/admin","timestamp":"2025-04-15 19:49:54"}
+{"level":"info","message":"Successfully connected to MongoDB","timestamp":"2025-04-15 19:49:54"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:50:19","url":"/admin","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin \u001b[36m301\u001b[0m 2.242 ms - 155\u001b[0m","timestamp":"2025-04-15 19:50:19"}
+{"duration":"4ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":301,"timestamp":"2025-04-15 19:50:19","url":"/admin","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:50:19","url":"/admin/","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/ \u001b[32m200\u001b[0m 3.722 ms - -\u001b[0m","timestamp":"2025-04-15 19:50:19"}
+{"duration":"6ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:50:19","url":"/admin/","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:50:21","url":"/api/content/stats","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /api/content/stats \u001b[32m200\u001b[0m 6.686 ms - 26\u001b[0m","timestamp":"2025-04-15 19:50:21"}
+{"duration":"8ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:50:21","url":"/api/content/stats","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:50:21","url":"/admin/login.html","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/login.html \u001b[32m200\u001b[0m 1.411 ms - -\u001b[0m","timestamp":"2025-04-15 19:50:21"}
+{"duration":"2ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:50:21","url":"/admin/login.html","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:50:21","url":"/favicon.ico","user":"anonymous"}
+{"level":"error","message":"ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","method":"GET","path":"/favicon.ico","stack":"Error: ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","timestamp":"2025-04-15 19:50:21"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 3.963 ms - 232\u001b[0m","timestamp":"2025-04-15 19:50:21"}
+{"duration":"5ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":404,"timestamp":"2025-04-15 19:50:21","url":"/favicon.ico","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"POST","timestamp":"2025-04-15 19:51:52","url":"/api/auth/login","user":"anonymous"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 121.330 ms - 49\u001b[0m","timestamp":"2025-04-15 19:51:52"}
+{"duration":"122ms","ip":"::1","level":"info","message":"API Response","method":"POST","status":401,"timestamp":"2025-04-15 19:51:52","url":"/api/auth/login","user":"anonymous"}
+{"level":"info","message":"Dropping database...","timestamp":"2025-04-15 19:53:26"}
+{"level":"info","message":"Database dropped successfully","timestamp":"2025-04-15 19:53:28"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-04-15 19:53:28"}
+{"level":"info","message":"Admin user created successfully","timestamp":"2025-04-15 19:53:29"}
+{"level":"info","message":"Default content created for section: hero","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Default content created for section: impact","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Default content created for section: services","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: primaryColor","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: secondaryColor","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: accentColor","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: backgroundColor","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: textColor","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: fontPrimary","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: fontSecondary","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: containerWidth","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: spacing","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: borderRadius","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: email","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: phone","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: address","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: socialMedia","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: title","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: description","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: keywords","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: googleAnalyticsId","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: enableBlog","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: enableNewsletter","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: enableChat","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Initialized setting: enableAnalytics","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Settings initialized successfully","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/uploads","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/uploads/images","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"Directory created: /project/sandbox/user-workspace/logs","timestamp":"2025-04-15 19:53:30"}
+{"level":"info","message":"SIGTERM received. Shutting down gracefully...","timestamp":"2025-04-15 19:54:20"}
+{"level":"info","message":"Process terminated","timestamp":"2025-04-15 19:54:20"}
+{"level":"info","message":"Server running in development mode on port 8000","timestamp":"2025-04-15 19:54:20"}
+{"level":"info","message":"Admin panel available at http://localhost:8000/admin","timestamp":"2025-04-15 19:54:20"}
+{"level":"info","message":"Successfully connected to MongoDB","timestamp":"2025-04-15 19:54:21"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:55:00","url":"/admin","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin \u001b[36m301\u001b[0m 5.613 ms - 155\u001b[0m","timestamp":"2025-04-15 19:55:00"}
+{"duration":"12ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":301,"timestamp":"2025-04-15 19:55:00","url":"/admin","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:55:00","url":"/admin/","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/ \u001b[32m200\u001b[0m 139.822 ms - -\u001b[0m","timestamp":"2025-04-15 19:55:00"}
+{"duration":"151ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:55:00","url":"/admin/","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:55:01","url":"/api/content/stats","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /api/content/stats \u001b[32m200\u001b[0m 12.745 ms - 26\u001b[0m","timestamp":"2025-04-15 19:55:01"}
+{"duration":"13ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:55:01","url":"/api/content/stats","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:55:01","url":"/admin/login.html","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/login.html \u001b[32m200\u001b[0m 105.321 ms - -\u001b[0m","timestamp":"2025-04-15 19:55:01"}
+{"duration":"108ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":200,"timestamp":"2025-04-15 19:55:01","url":"/admin/login.html","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:55:02","url":"/favicon.ico","user":"anonymous"}
+{"level":"error","message":"ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","method":"GET","path":"/favicon.ico","stack":"Error: ENOENT: no such file or directory, stat '/project/sandbox/user-workspace/frontend/index.html'","timestamp":"2025-04-15 19:55:02"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 4.618 ms - 232\u001b[0m","timestamp":"2025-04-15 19:55:02"}
+{"duration":"6ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":404,"timestamp":"2025-04-15 19:55:02","url":"/favicon.ico","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"POST","timestamp":"2025-04-15 19:56:41","url":"/api/auth/login","user":"anonymous"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 161.807 ms - 555\u001b[0m","timestamp":"2025-04-15 19:56:41"}
+{"duration":"162ms","ip":"::1","level":"info","message":"API Response","method":"POST","status":200,"timestamp":"2025-04-15 19:56:41","url":"/api/auth/login","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:56:41","url":"/admin/","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /admin/ \u001b[36m304\u001b[0m 1.103 ms - -\u001b[0m","timestamp":"2025-04-15 19:56:41"}
+{"duration":"1ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":304,"timestamp":"2025-04-15 19:56:41","url":"/admin/","user":"anonymous"}
+{"duration":"0ms","ip":"::1","level":"info","message":"API Request","method":"GET","timestamp":"2025-04-15 19:56:42","url":"/api/content/stats","user":"anonymous"}
+{"level":"info","message":"\u001b[0mGET /api/content/stats \u001b[36m304\u001b[0m 2.107 ms - -\u001b[0m","timestamp":"2025-04-15 19:56:42"}
+{"duration":"3ms","ip":"::1","level":"info","message":"API Response","method":"GET","status":304,"timestamp":"2025-04-15 19:56:42","url":"/api/content/stats","user":"anonymous"}
